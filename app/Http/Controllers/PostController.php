@@ -17,6 +17,15 @@ class PostController extends Controller
             // 'sumt' => $sum,
         ]);
     }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('posts/show',[
+            'id' => $id,
+            'post' => $post
+        ]);
+    }
     public function create()
     {
         return view('posts/create');
@@ -33,4 +42,6 @@ class PostController extends Controller
         $post->save();
         return redirect()->route('posts.index');
     }
+
+    
 }
