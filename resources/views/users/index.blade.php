@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <a href="{{ route('posts.index') }}">{{ __('Post') }}</a><br>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight flex items-center justify-between mt-4 p-6 space-x-5">
@@ -22,3 +25,4 @@
             </div>
         </div>
     </div>
+    @endsection

@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
  <a href="{{ route('posts.index') }}">{{ __('Post') }}</a>
 <div style="width:50%; margin: 0 auto; text-align:center;">
     <form action="{{ route('posts.create') }}" method="POST">
@@ -13,3 +15,5 @@
         <button>送信</button>
     </form>
 </div>
+
+@endsection
