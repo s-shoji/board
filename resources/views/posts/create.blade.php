@@ -1,4 +1,5 @@
 
+ <a href="{{ route('posts.index') }}">{{ __('Post') }}</a>
 <div style="width:50%; margin: 0 auto; text-align:center;">
     <form action="{{ route('posts.create') }}" method="POST">
     @csrf

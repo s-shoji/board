@@ -4,6 +4,7 @@
             {{ __('Post') }}
             <!-- <a href="{{ route('posts.create') }}">{{ __('TweetCreate') }}</a> -->
         </h2>  
+        <a href="{{ route('posts.create') }}">{{ __('PostCreate') }}</a>
    
         <!-- <h2>今月の累計投稿数は{{$sumt ?? ''}}です。</h2>    -->
     </x-slot>
@@ -14,6 +15,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                 @foreach($posts as $post)
                 <div class="text-center text-2xl" >
+                <a class="show_link" href="{{ route('posts.show', ['id' => $post->id]) }}">id{{$post->id}}</a><br>
                   
                   title:
                   {{$post->title}} <br>
