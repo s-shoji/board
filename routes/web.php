@@ -27,6 +27,8 @@ Route::get('posts/create','PostController@create')->name('posts.create');
 //投稿を押した時
 Route::post('posts/create','PostController@store');
 
- Route::get('posts/{id}/show','CommentController@index' )->name('posts.show');
- Route::post('posts/{id}/comment','CommentController@create')->name('comments.create');
+Route::get('posts/{id}/show','CommentController@index' )->name('posts.show'); 
+Route::post('posts/{id}/comment','CommentController@create')->name('comments.create');
+
+Route::get('users/index', 'UserController@index')->name('users.index');
 

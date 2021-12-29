@@ -4,9 +4,9 @@
             {{ __('Post') }}
             <!-- <a href="{{ route('posts.create') }}">{{ __('TweetCreate') }}</a> -->
         </h2>  
-        <a href="{{ route('posts.create') }}">{{ __('PostCreate') }}</a>
-   
-        <!-- <h2>今月の累計投稿数は{{$sumt ?? ''}}です。</h2>    -->
+        <a href="{{ route('posts.create') }}">{{ __('PostCreate') }}</a><br>
+        <a href="{{ route('users.index') }}">{{ __('User') }}</a><br>   
+        <h2>今月の累計投稿数は{{$sum}}です。</h2>  
     </x-slot>
 
     <div class="py-12">
