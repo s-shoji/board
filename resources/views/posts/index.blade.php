@@ -1,11 +1,13 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('content')
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight flex items-center justify-between mt-4 p-6 space-x-5">
             {{ __('Post') }}
             <!-- <a href="{{ route('posts.create') }}">{{ __('TweetCreate') }}</a> -->
         </h2>  
-        <a href="{{ route('posts.create') }}">{{ __('PostCreate') }}</a><br>
-        <a href="{{ route('users.index') }}">{{ __('User') }}</a><br>   
+        
         <h2>今月の累計投稿数は{{$sum}}です。</h2>  
     </x-slot>
 
@@ -32,4 +34,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+    @endsection

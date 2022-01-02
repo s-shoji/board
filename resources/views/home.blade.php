@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<a href="{{ route('posts.index') }}">{{ __('Post') }}</a>
+
 @section('content')
 
 <div class="container">

@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+<div style="width:50%; margin: 0 auto; text-align:center;">
 <a href="{{ route('posts.index') }}">{{ __('Post') }}</a><br>
 id:
                   {{$post->id}} <br>
@@ -9,11 +13,10 @@ id:
                   {{$post->user->name}}
 
                   <br><br><br>
-  <form action="{{ route('comments.create',['id' => $post->id]),   }}" method="POST">
+  <form action="{{ route('comments.create',['id' => $post->id])  }}" method="POST">
     @csrf
         <div>
-            <!-- タイトル：
-            <input name="title" placeholder="タイトルの入力欄"/> -->
+           
         </div>
         <div>
         <label for="comment" :value="__('Comment')">
@@ -36,4 +39,6 @@ id:
                             user_name: {{$comment->user->name}}<br><br>
                         </div>
                 @endforeach
-                @endif
+   @endif
+ 
+</div>
